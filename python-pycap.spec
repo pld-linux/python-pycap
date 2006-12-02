@@ -8,7 +8,7 @@ Source0:	http://dl.sourceforge.net/pycap/pycap-%{version}.tar.gz
 # Source0-md5:	c90bc5382dede1a941e023e7bc27c473
 URL:		http://pycap.sourceforge.net/
 BuildRequires:	libnet-devel
-BuildRequires:	python-devel >= 2.2.1
+BuildRequires:	python-devel >= 2.5
 %pyrequires_eq	python-modules
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
