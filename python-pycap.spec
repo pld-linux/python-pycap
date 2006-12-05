@@ -1,4 +1,5 @@
 Summary:	Python Packet Capture and Injection Library
+Summary(pl):	Biblioteka Pythona do przechwytywania i wstrzykiwania pakietów
 Name:		python-pycap
 Version:	0.1.6
 Release:	1
@@ -8,7 +9,7 @@ Source0:	http://dl.sourceforge.net/pycap/pycap-%{version}.tar.gz
 # Source0-md5:	c90bc5382dede1a941e023e7bc27c473
 URL:		http://pycap.sourceforge.net/
 BuildRequires:	libnet-devel
-BuildRequires:	python-devel >= 2.5
+BuildRequires:	python-devel >= 1:2.5
 %pyrequires_eq	python-modules
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -16,6 +17,11 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 This package provides the ability to capture packets from, and inject
 packets onto, network interfaces. It supports commonly found protocols
 such as Ethernet, PPP, IP, ARP, TCP, UDP, and ICMP.
+
+%description -l pl
+Ten pakiet daje mo¿liwo¶æ przechwytywania pakietów oraz wstrzykiwania
+ich poprzez interfejsy sieciowe. Obs³uguje czêsto spotykane protoko³y
+takie jak Ethernet, PPP, IP, ARP, TCP, UDP i ICMP.
 
 %prep
 %setup -q -n pycap-%{version}
@@ -26,7 +32,6 @@ env CFLAGS="%{rpmcflags}" %{__python} setup.py build
 %install
 rm -rf $RPM_BUILD_ROOT
 python -- setup.py install --root=$RPM_BUILD_ROOT --optimize=2
-
 
 %clean
 rm -rf $RPM_BUILD_ROOT
