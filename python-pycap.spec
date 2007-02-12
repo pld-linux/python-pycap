@@ -1,5 +1,5 @@
 Summary:	Python Packet Capture and Injection Library
-Summary(pl):	Biblioteka Pythona do przechwytywania i wstrzykiwania pakietów
+Summary(pl.UTF-8):   Biblioteka Pythona do przechwytywania i wstrzykiwania pakietÃ³w
 Name:		python-pycap
 Version:	0.1.6
 Release:	1
@@ -18,9 +18,9 @@ This package provides the ability to capture packets from, and inject
 packets onto, network interfaces. It supports commonly found protocols
 such as Ethernet, PPP, IP, ARP, TCP, UDP, and ICMP.
 
-%description -l pl
-Ten pakiet daje mo¿liwo¶æ przechwytywania pakietów oraz wstrzykiwania
-ich poprzez interfejsy sieciowe. Obs³uguje czêsto spotykane protoko³y
+%description -l pl.UTF-8
+Ten pakiet daje moÅ¼liwoÅ›Ä‡ przechwytywania pakietÃ³w oraz wstrzykiwania
+ich poprzez interfejsy sieciowe. ObsÅ‚uguje czÄ™sto spotykane protokoÅ‚y
 takie jak Ethernet, PPP, IP, ARP, TCP, UDP i ICMP.
 
 %prep
