@@ -10,6 +10,7 @@ Source0:	http://dl.sourceforge.net/pycap/pycap-%{version}.tar.gz
 URL:		http://pycap.sourceforge.net/
 BuildRequires:	libnet-devel
 BuildRequires:	python-devel >= 1:2.5
+BuildRequires:	rpm-pythonprov
 %pyrequires_eq	python-modules
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
