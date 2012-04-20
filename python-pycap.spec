@@ -2,7 +2,7 @@ Summary:	Python Packet Capture and Injection Library
 Summary(pl.UTF-8):	Biblioteka Pythona do przechwytywania i wstrzykiwania pakietów
 Name:		python-pycap
 Version:	0.1.6
-Release:	4
+Release:	5
 License:	BSD
 Group:		Libraries/Python
 Source0:	http://dl.sourceforge.net/pycap/pycap-%{version}.tar.gz
