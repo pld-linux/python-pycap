@@ -29,7 +29,7 @@ takie jak Ethernet, PPP, IP, ARP, TCP, UDP i ICMP.
 %setup -q -n pycap-%{version}
 
 %build
-env CFLAGS="%{rpmcflags}" %{__python} setup.py build
+env CFLAGS="%{rpmcflags}" %py_build
 
 %install
 rm -rf $RPM_BUILD_ROOT
