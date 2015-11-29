@@ -8,6 +8,7 @@ Group:		Libraries/Python
 Source0:	http://dl.sourceforge.net/pycap/pycap-%{version}.tar.gz
 # Source0-md5:	c90bc5382dede1a941e023e7bc27c473
 URL:		http://pycap.sourceforge.net/
+BuildRequires:	rpmbuild(macros) >= 1.710
 BuildRequires:	libnet-devel
 BuildRequires:	libpcap-devel
 BuildRequires:	python-devel >= 1:2.5
