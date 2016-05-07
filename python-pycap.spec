@@ -2,7 +2,7 @@ Summary:	Python Packet Capture and Injection Library
 Summary(pl.UTF-8):	Biblioteka Pythona do przechwytywania i wstrzykiwania pakietów
 Name:		python-pycap
 Version:	0.1.6
-Release:	6
+Release:	7
 License:	BSD
 Group:		Libraries/Python
 Source0:	http://dl.sourceforge.net/pycap/pycap-%{version}.tar.gz
@@ -30,11 +30,13 @@ takie jak Ethernet, PPP, IP, ARP, TCP, UDP i ICMP.
 %setup -q -n pycap-%{version}
 
 %build
-env CFLAGS="%{rpmcflags}" %py_build
+%py_build
 
 %install
 rm -rf $RPM_BUILD_ROOT
-python -- setup.py install --root=$RPM_BUILD_ROOT --optimize=2
+
+%py_install
+%py_postclean
 
 %clean
 rm -rf $RPM_BUILD_ROOT
