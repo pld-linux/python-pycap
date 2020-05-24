@@ -2,18 +2,18 @@ Summary:	Python Packet Capture and Injection Library
 Summary(pl.UTF-8):	Biblioteka Pythona do przechwytywania i wstrzykiwania pakietów
 Name:		python-pycap
 Version:	0.1.6
-Release:	7
+Release:	8
 License:	BSD
 Group:		Libraries/Python
 Source0:	http://dl.sourceforge.net/pycap/pycap-%{version}.tar.gz
 # Source0-md5:	c90bc5382dede1a941e023e7bc27c473
 URL:		http://pycap.sourceforge.net/
-BuildRequires:	rpmbuild(macros) >= 1.710
 BuildRequires:	libnet-devel
 BuildRequires:	libpcap-devel
 BuildRequires:	python-devel >= 1:2.5
 BuildRequires:	rpm-pythonprov
-%pyrequires_eq	python-modules
+BuildRequires:	rpmbuild(macros) >= 1.714
+Requires:	python-modules >= 1:2.5
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -36,6 +36,7 @@ takie jak Ethernet, PPP, IP, ARP, TCP, UDP i ICMP.
 rm -rf $RPM_BUILD_ROOT
 
 %py_install
+
 %py_postclean
 
 %clean
@@ -43,10 +44,10 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc docs/*.html docs/*.css
+%doc docs/*.{html,*.css}
 %dir %{py_sitedir}/pycap
-%{py_sitedir}/*.egg-info
 %attr(755,root,root) %{py_sitedir}/pycap/*.so
 %{py_sitedir}/pycap/*.py[co]
 %dir %{py_sitedir}/pycap/constants
 %{py_sitedir}/pycap/constants/*.py[co]
+%{py_sitedir}/pycap-%{version}-py*.egg-info
